@@ -55,9 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="SotrudnikiWindow.xaml.cs">
-      <DependentUpon>SotrudnikiWindow.xaml</DependentUpon>
+    <Compile Include="AnimalsPage.xaml.cs">
+      <DependentUpon>AnimalsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SotrudnikiPage.xaml.cs">
+      <DependentUpon>SotrudnikiPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AnimalsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,7 +82,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SotrudnikiWindow.xaml">
+    <Page Include="SotrudnikiPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

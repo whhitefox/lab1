@@ -18,18 +18,19 @@ namespace учёбка1
 {
     public partial class MainWindow : Window
     {
-        AnimalsTableAdapter Animals = new AnimalsTableAdapter();
-
         public MainWindow()
         {
             InitializeComponent();
-            AnimalsGrid.ItemsSource = Animals.GetData();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SotrudnikiButton_Click(object sender, RoutedEventArgs e)
         {
-            SotrudnikiWindow window = new SotrudnikiWindow();
-            window.Show();
+            PageFrame.Source = new Uri("SotrudnikiPage.xaml", UriKind.Relative);
+        }
+
+        private void AnimalsButton_Click(object sender, RoutedEventArgs e)
+        {
+            PageFrame.Source = new Uri("AnimalsPage.xaml", UriKind.Relative);
         }
     }
 }

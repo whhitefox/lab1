@@ -14,5 +14,7 @@ D:\C++\учёбка1\учёбка1\obj\Debug\учёбка1.csproj.GenerateResour
 D:\C++\учёбка1\учёбка1\obj\Debug\учёбка1.csproj.CoreCompileInputs.cache
 D:\C++\учёбка1\учёбка1\obj\Debug\учёбка1.exe
 D:\C++\учёбка1\учёбка1\obj\Debug\учёбка1.pdb
-D:\C++\учёбка1\учёбка1\obj\Debug\SotrudnikiWindow.g.cs
-D:\C++\учёбка1\учёбка1\obj\Debug\SotrudnikiWindow.baml
+D:\C++\учёбка1\учёбка1\obj\Debug\AnimalsPage.g.cs
+D:\C++\учёбка1\учёбка1\obj\Debug\SotrudnikiPage.g.cs
+D:\C++\учёбка1\учёбка1\obj\Debug\AnimalsPage.baml
+D:\C++\учёбка1\учёбка1\obj\Debug\SotrudnikiPage.baml

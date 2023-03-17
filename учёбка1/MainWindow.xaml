@@ -6,12 +6,18 @@
         xmlns:local="clr-namespace:учёбка1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="6*" />
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" x:Name="AnimalsGrid"/>
-        <Button Grid.Row="1" Content="Таблица Sotrudnik" Click="Button_Click" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="AnimalsButton" Grid.Column="0" Content="Таблица с животными" Click="AnimalsButton_Click" Height="20" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <Button x:Name="SotrudnikiButton" Grid.Column="1" Content="Таблица с сотрудниками" Click="SotrudnikiButton_Click"/>
+        <Frame x:Name="PageFrame" Grid.Row="1" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
