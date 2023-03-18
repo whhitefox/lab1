@@ -10,21 +10,23 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*" />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="293*" />
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="41*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <DataGrid Grid.Row="0" Grid.ColumnSpan="2" x:Name="AnimalsGrid"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Название:" VerticalAlignment="Center" HorizontalAlignment="Right" />
-        <TextBox x:Name="NameTextBox" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" />
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Количество:" VerticalAlignment="Center" HorizontalAlignment="Right" />
-        <TextBox x:Name="AmountTextBox" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" />
-        <Button x:Name="AddButton" Grid.Row="3" Grid.ColumnSpan="2" Content="Добавить Животное" Click="AddButton_Click" />
+        <DataGrid Grid.Row="0" Grid.ColumnSpan="2" x:Name="AnimalsGrid" Grid.RowSpan="4"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Название:" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="78,0,0,0" Height="15" Width="55" />
+        <TextBox x:Name="NameTextBox" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="133,0,0,0" Height="17" />
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Количество:" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="67,0,0,0" Grid.ColumnSpan="2" Height="15" Width="67" />
+        <TextBox x:Name="AmountTextBox" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="133,0,0,0" Height="17" />
+        <Button x:Name="AddButton" Grid.Row="4" Grid.ColumnSpan="2" Content="Добавить Животное" Click="AddButton_Click" />
+        <Button x:Name="DeleteButton" Grid.Row="1" Grid.ColumnSpan="2" Content="Удалить Животное" Click="DeleteButton_Click" />
     </Grid>
 </Page>

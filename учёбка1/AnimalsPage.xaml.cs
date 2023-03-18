@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,5 +40,13 @@ namespace учёбка1
             catch { }
             AnimalsGrid.ItemsSource = Animals.GetData();
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (int)(AnimalsGrid.SelectedItem as DataRowView).Row[0];
+            Animals.DeleteAnimals(id);
+            AnimalsGrid.ItemsSource = Animals.GetData();
+        }
+
     }
 }
