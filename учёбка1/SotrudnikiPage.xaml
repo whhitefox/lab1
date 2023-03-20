@@ -10,7 +10,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="281*" />
+            <RowDefinition Height="228*" />
+            <RowDefinition Height="53*"/>
             <RowDefinition Height="46*"/>
             <RowDefinition Height="41*" />
             <RowDefinition Height="41*" />
@@ -21,12 +22,13 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <DataGrid Grid.Row="0" Grid.ColumnSpan="2" x:Name="SotrudnikGrid" Grid.RowSpan="2"/>
+        <DataGrid Grid.Row="0" Grid.ColumnSpan="2" x:Name="SotrudnikGrid" Grid.RowSpan="3" SelectionChanged="SotrudnikGrid_SelectionChanged"/>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Имя:" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="107,0,0,0" />
         <TextBox x:Name="NameTextBox" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="133,0,0,0" />
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Id животного:" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="57,0,0,0" />
         <TextBox x:Name="AnimalsidTextBox" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="133,0,0,0" />
-        <Button x:Name="AddButton" Grid.Row="3" Grid.ColumnSpan="2" Content="Добавить Сотрудника" Click="AddButton_Click" Margin="0,41,0,0" Grid.RowSpan="2" />
+        <Button x:Name="AddButton" Grid.Row="4" Grid.ColumnSpan="2" Content="Добавить Сотрудника" Click="AddButton_Click" />
         <Button x:Name="DeleteButton" Grid.Row="1" Grid.ColumnSpan="2" Content="Удалить Сотрудника" Click="DeleteButton_Click" Margin="0,0,0,10" Grid.RowSpan="1" />
+        <Button x:Name="UpdateButton" Grid.Row="5" Grid.ColumnSpan="2" Content="Изменить Сотрудника" Click="UpdateButton_Click" Margin="0,0,0,10" Grid.RowSpan="1" />
     </Grid>
 </Page>

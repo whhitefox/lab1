@@ -48,5 +48,26 @@ namespace учёбка1
             AnimalsGrid.ItemsSource = Animals.GetData();
         }
 
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (AnimalsGrid.SelectedItem != null)
+            {
+
+                int id = (int)(AnimalsGrid.SelectedItem as DataRowView).Row[0];
+                Animals.UpdateQuery(NameTextBox.Text, Convert.ToInt16(AmountTextBox.Text), (id));
+                AnimalsGrid.ItemsSource = Animals.GetData();
+            }
+        }
+
+        private void AnimalsGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (AnimalsGrid.SelectedItem != null)
+            {
+                String name = (AnimalsGrid.SelectedItem as DataRowView).Row[1].ToString();
+                NameTextBox.Text = name;
+                String am = (AnimalsGrid.SelectedItem as DataRowView).Row[2].ToString();
+                AmountTextBox.Text = am;
+            }
+        }
     }
 }

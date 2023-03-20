@@ -47,5 +47,29 @@ namespace учёбка1
             Sotrudniki.SotrudnikDelete(id);
             SotrudnikGrid.ItemsSource = Sotrudniki.GetData();
         }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SotrudnikGrid.SelectedItem != null)
+            {
+                
+                int id = (int)(SotrudnikGrid.SelectedItem as DataRowView).Row[0]; 
+                Sotrudniki.UpdateQuery(NameTextBox.Text, Convert.ToInt32(AnimalsidTextBox.Text), (id));
+                SotrudnikGrid.ItemsSource = Sotrudniki.GetData();
+            }
+
+        }
+
+        private void SotrudnikGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (SotrudnikGrid.SelectedItem != null)
+            {
+                String name = (SotrudnikGrid.SelectedItem as DataRowView).Row[1].ToString(); 
+                NameTextBox.Text = name;
+                String ai = (SotrudnikGrid.SelectedItem as DataRowView).Row[2].ToString(); 
+                AnimalsidTextBox.Text = ai;
+            }
+
+        }
     }
 }

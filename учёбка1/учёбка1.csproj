@@ -58,6 +58,9 @@
     <Compile Include="AnimalsPage.xaml.cs">
       <DependentUpon>AnimalsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SotrudnikiPage.xaml.cs">
       <DependentUpon>SotrudnikiPage.xaml</DependentUpon>
     </Compile>
